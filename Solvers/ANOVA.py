@@ -52,3 +52,5 @@ df_error = n_total - n_groups
 error_std_dev = np.sqrt(SS_res / df_error)
 
 print(f"Error standard deviation: {error_std_dev:.4f}")
+
+
