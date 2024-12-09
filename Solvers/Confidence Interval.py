@@ -21,3 +21,4 @@ ci_lower = mean - stats.t.ppf(1-significance/2, df=n-1) * np.sqrt(mean*(1-mean)/
 ci_upper = mean + stats.t.ppf(1-significance/2, df=n-1) * np.sqrt(mean*(1-mean)/n)
 print("90% confidence interval for estimate: " + str(ci_lower), str(ci_upper))
 
+
