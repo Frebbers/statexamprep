@@ -1,4 +1,6 @@
 import numpy as np
+import scipy.stats as stats
+import statsmodels.formula.api as smf
 x = np.array([0, 0, 2, 2, 4, 4, 6, 6, 8, 8, 12, 12])
 y = np.array([16, 116, 1170, 841, 2287, 2012, 2653, 3333, 4270, 3999, 5750, 5407])
 #Fit the linear regression model on y and x
@@ -19,3 +21,13 @@ intercept = mean_y - slope * mean_x
 
 print(f"Slope: {slope:.4f}")
 print(f"Intercept: {intercept:.4f}")
+
+# Method 2: Using statsmodels
+# Fit the linear regression model
+model = smf.ols('y ~ x', data={'x': x, 'y': y}).fit()
+print(model.summary())
+
+
+
+
+
