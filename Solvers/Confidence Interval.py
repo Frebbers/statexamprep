@@ -9,6 +9,7 @@ SEM = s / np.sqrt(n)
 mu_lower = sample_mean - stats.t.ppf(confidence_level, df=n - 1) * SEM
 mu_upper = sample_mean + stats.t.ppf(confidence_level, df=n - 1) * SEM
 print(str(confidence_level) + " confidence interval for mean estimate: " + str(mu_lower), str(mu_upper))
+
 # 95% confidence interval for standard deviation estimate
 s_lower = s * np.sqrt(n / stats.chi2.ppf(confidence_level, df=n - 1))
 s_upper = s * np.sqrt(n / stats.chi2.ppf(1-confidence_level, df=n - 1))
