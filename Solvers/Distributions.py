@@ -5,8 +5,8 @@ import math
 import numpy as np
 from scipy.stats import binom
 
-lam = 0.45 # the average number of events in a given interval
-x = 5 # the number of events we are interested in seeing
+lam = 2.5 # the average number of events in a given interval
+x = 10 # the number of events we are interested in seeing
 
 #The probability of seeing exactly x events in a given interval
 prob = (np.exp(-lam) * lam**x) / math.factorial(x)
